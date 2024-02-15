@@ -101,9 +101,9 @@ MonoBehaviour:
   _health: 20
   _rotationSpeed: 0.25
   _walkingSpeed: 2
-  _accelerationSpeed: 10
+  _accelerationSpeed: 15
   _sightDistance: 0.2
-  _bounceTreshold: 0.1
+  _bounceTreshold: 0.2
   _obstacles:
     serializedVersion: 2
     m_Bits: 64

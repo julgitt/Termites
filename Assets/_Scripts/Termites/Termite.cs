@@ -38,7 +38,7 @@ public class Termite : MonoBehaviour
     {
         Vector2 deltaVelocity = (desiredVelocity - velocity) * _accelerationSpeed;
         Vector2 acceleration = Vector2.ClampMagnitude(deltaVelocity, _accelerationSpeed);
-        velocity = Vector2.ClampMagnitude(desiredVelocity + acceleration * Time.deltaTime, _walkingSpeed);
+        velocity = Vector2.ClampMagnitude(velocity + acceleration * Time.deltaTime, _walkingSpeed);
     }
 
     private void UpdatePosition()
@@ -82,6 +82,7 @@ public class Termite : MonoBehaviour
         {
             turnAroundEndTime = Time.time + _bounceTreshold;
             newDirection = CalculateAvoidanceDirection(direction, newDirection);
+            newDirection -= direction;
 
             Debug.DrawRay(transform.position, newDirection, Color.green);
             return newDirection;
