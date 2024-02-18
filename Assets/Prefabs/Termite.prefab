@@ -73,9 +73,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 4
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 0.919394, b: 0.75, a: 1}
+  m_Color: {r: 0.8018868, g: 0.72414464, b: 0.54089534, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -97,13 +97,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d206e8a5220d2cb4f90b828ef934755c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _age: 1
-  _health: 20
-  _rotationSpeed: 0.25
   _walkingSpeed: 2
-  _accelerationSpeed: 15
-  _sightDistance: 0.2
-  _bounceTreshold: 0.2
+  _steerStrength: 2
+  _rotationSpeed: 6
+  _rotationStrength: 0.25
+  _sightDistance: 0.5
+  _bounceThreshold: 0.1
   _obstacles:
     serializedVersion: 2
     m_Bits: 64
