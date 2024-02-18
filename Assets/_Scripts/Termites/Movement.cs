@@ -10,6 +10,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private float _bouncingRotationSpeed = 10f;
     [SerializeField] private float _wanderStrength = .25f;
     [SerializeField] private float _sightDistance = .5f;
+    [SerializeField] private float _fieldOfView = 40;
     [SerializeField] private float _bounceThreshold = .1f;
     [SerializeField] private LayerMask _obstacles;
 
@@ -58,7 +59,7 @@ public class Movement : MonoBehaviour
     private Vector2 GetDesiredDirection()
     {
         Vector2 currentDirection = _velocity.normalized;
-        Vector2[] rayDirections = CalculateRayDirections(currentDirection, 2, 40);
+        Vector2[] rayDirections = CalculateRayDirections(currentDirection, 2, _fieldOfView);
 
         bool obstacleDetected = DetectObstacles(rayDirections, out Vector2 newDirection);
 
